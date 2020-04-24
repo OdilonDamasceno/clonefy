@@ -1,0 +1,4 @@
+lib/app/pages/create_account/create_account_page.dart
+test/app/pages/create_account/create_account_page_test.dart
+lib/app/pages/create_account/create_account_controller.dart
+test/app/pages/create_account/create_account_controller_test.dart
