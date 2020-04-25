@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:spotify_clone/app/app_widget.dart';
 import 'package:spotify_clone/app/modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
+import 'pages/create_account/create_account_page.dart';
 
 class AppModule extends MainModule {
   @override
@@ -16,7 +17,12 @@ class AppModule extends MainModule {
   @override
   List<Router> get routers => [
         Router(Modular.initialRoute, module: HomeModule()),
-        Router('/login', module: LoginModule())
+        Router('/login', module: LoginModule()),
+        Router(
+          '/create',
+          child: (_, args) => CreateAccountPage(),
+          transition: TransitionType.rightToLeft,
+        ),
       ];
 
   @override

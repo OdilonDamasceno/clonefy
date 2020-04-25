@@ -14,6 +14,7 @@ class ButtonCustomWidget extends StatelessWidget {
       height: 50,
       width: double.infinity,
       child: FloatingActionButton(
+        heroTag: new Object(),
         splashColor: Colors.transparent,
         backgroundColor: color,
         child: Text(text.toUpperCase(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_modular/flutter_modular.dart';
 import 'package:spotify_clone/app/utils/widgets/buttom_custom/buttom_custom_widget.dart';
 
 class LoginPage extends StatefulWidget {
@@ -61,7 +62,9 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 ButtonCustomWidget(
                   color: Colors.green,
-                  onPressed: () {},
+                  onPressed: () {
+                    Modular.to.pushNamed('/create');
+                  },
                   text: 'Inscreva-se Grátis',
                 ),
                 ButtonCustomWidget(
