@@ -1,0 +1,4 @@
+lib/app/pages/sign_in/sign_in_page.dart
+test/app/pages/sign_in/sign_in_page_test.dart
+lib/app/pages/sign_in/sign_in_controller.dart
+test/app/pages/sign_in/sign_in_controller_test.dart

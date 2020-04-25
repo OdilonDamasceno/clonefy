@@ -244,7 +244,11 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(25),
                       ),
-                      onPressed: passIsValid ? () {} : null,
+                      onPressed: passIsValid
+                          ? () {
+                              Modular.to.pushNamed('/home');
+                            }
+                          : null,
                       color: Colors.white,
                       disabledColor: Colors.white38,
                       child: Container(

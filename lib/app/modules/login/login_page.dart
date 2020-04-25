@@ -75,7 +75,7 @@ class _LoginPageState extends State<LoginPage> {
                 ButtonCustomWidget(
                   color: Colors.white,
                   textColor: Colors.black,
-                  onPressed: () {},
+                  onPressed: () => Modular.to.pushNamed('/signin'),
                   text: 'entrar',
                 ),
               ],
