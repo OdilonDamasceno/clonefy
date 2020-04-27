@@ -11,6 +11,7 @@ class _SignInPageState extends State<SignInPage>
     with SingleTickerProviderStateMixin {
   final key = GlobalKey<FormState>();
   bool isValid = false;
+  bool passIsValid = false;
   AnimationController _controller;
   Animation<Offset> _offsetAnimation;
 
@@ -18,7 +19,7 @@ class _SignInPageState extends State<SignInPage>
   void initState() {
     super.initState();
     _controller = AnimationController(
-        vsync: this, duration: const Duration(milliseconds: 500))
+        vsync: this, duration: const Duration(milliseconds: 400))
       ..forward();
     _offsetAnimation =
         Tween<Offset>(begin: Offset(1, 0), end: Offset(0, 0)).animate(
@@ -163,16 +164,15 @@ class _SignInPageState extends State<SignInPage>
                               validator: (String value) {
                                 if (value.length < 8) {
                                   SchedulerBinding.instance
-                                      .addPostFrameCallback(
-                                          (_) => setState(() {
-                                            isValid=false;
+                                      .addPostFrameCallback((_) => setState(() {
+                                            passIsValid = false;
                                           }));
                                   return null;
                                 }
-                                SchedulerBinding.instance.addPostFrameCallback(
-                                    (_) => setState(() {
-                                      isValid=true;
-                                    }));
+                                SchedulerBinding.instance
+                                    .addPostFrameCallback((_) => setState(() {
+                                          passIsValid = true;
+                                        }));
                                 return null;
                               },
                               style: TextStyle(
@@ -217,9 +217,7 @@ class _SignInPageState extends State<SignInPage>
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
-                  onPressed: isValid ? () {
-                    Modular.to.pushNamed('/home');
-                  } : null,
+                  onPressed: isValid ? () {} : null,
                   color: Colors.white,
                   disabledColor: Colors.white38,
                   child: Container(
@@ -238,16 +236,21 @@ class _SignInPageState extends State<SignInPage>
                 ),
               ),
               SizedBox(height: 17),
-              Align(
-                alignment: Alignment.center,
-                child: Text(
-                  'Não consegue fazer login? Toque aqui para obter ajuda.',
-                  style: TextStyle(
-                    fontSize: 17,
-                    color: Colors.white,
-                    fontWeight: FontWeight.w500,
+              GestureDetector(
+                onTap: () {
+                  Modular.to.pushNamed('/rescue');
+                },
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    'Não consegue fazer login? Toque aqui para obter ajuda.',
+                    style: TextStyle(
+                      fontSize: 17,
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    textAlign: TextAlign.center,
                   ),
-                  textAlign: TextAlign.center,
                 ),
               ),
             ],

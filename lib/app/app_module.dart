@@ -1,3 +1,5 @@
+import 'package:spotify_clone/app/pages/rescue_account/rescue_account_controller.dart';
+import 'package:spotify_clone/app/pages/rescue_account/rescue_account_page.dart';
 import 'package:spotify_clone/app/pages/sign_in/sign_in_controller.dart';
 import 'package:spotify_clone/app/pages/create_account/create_account_controller.dart';
 import 'package:spotify_clone/app/app_controller.dart';
@@ -12,6 +14,7 @@ import 'pages/sign_in/sign_in_page.dart';
 class AppModule extends MainModule {
   @override
   List<Bind> get binds => [
+        Bind((i) => RescueAccountController()),
         Bind((i) => SignInController()),
         Bind((i) => CreateAccountController()),
         Bind((i) => AppController()),
@@ -26,7 +29,16 @@ class AppModule extends MainModule {
           child: (_, args) => CreateAccountPage(),
           transition: TransitionType.rightToLeft,
         ),
-        Router('/signin', child: (_, args) => SignInPage())
+        Router(
+          '/signin',
+          child: (_, args) => SignInPage(),
+          transition: TransitionType.noTransition,
+        ),
+        Router(
+          '/rescue',
+          child: (_, args) => RescueAccountPage(),
+          transition: TransitionType.noTransition,
+        )
       ];
 
   @override
