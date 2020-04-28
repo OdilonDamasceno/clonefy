@@ -217,7 +217,11 @@ class _SignInPageState extends State<SignInPage>
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(25),
                   ),
-                  onPressed: isValid ? () {} : null,
+                  onPressed: passIsValid && isValid
+                      ? () {
+                          Modular.to.pushNamed('/home');
+                        }
+                      : null,
                   color: Colors.white,
                   disabledColor: Colors.white38,
                   child: Container(

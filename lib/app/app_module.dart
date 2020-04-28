@@ -1,15 +1,15 @@
-import 'package:spotify_clone/app/pages/rescue_account/rescue_account_controller.dart';
-import 'package:spotify_clone/app/pages/rescue_account/rescue_account_page.dart';
-import 'package:spotify_clone/app/pages/sign_in/sign_in_controller.dart';
-import 'package:spotify_clone/app/pages/create_account/create_account_controller.dart';
 import 'package:spotify_clone/app/app_controller.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/app/app_widget.dart';
 import 'package:spotify_clone/app/modules/home/home_module.dart';
 import 'modules/login/login_module.dart';
-import 'pages/create_account/create_account_page.dart';
-import 'pages/sign_in/sign_in_page.dart';
+import 'modules/login/pages/create_account/create_account_controller.dart';
+import 'modules/login/pages/create_account/create_account_page.dart';
+import 'modules/login/pages/rescue_account/rescue_account_controller.dart';
+import 'modules/login/pages/rescue_account/rescue_account_page.dart';
+import 'modules/login/pages/sign_in/sign_in_controller.dart';
+import 'modules/login/pages/sign_in/sign_in_page.dart';
 
 class AppModule extends MainModule {
   @override

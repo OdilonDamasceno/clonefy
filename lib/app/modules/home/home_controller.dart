@@ -6,10 +6,18 @@ class HomeController = _HomeControllerBase with _$HomeController;
 
 abstract class _HomeControllerBase with Store {
   @observable
-  int value = 0;
+  int index = 0;
+
+  @observable
+  bool isPlay = false;
 
   @action
-  void increment() {
-    value++;
+  changeIndex(value) {
+    index = value;
   }
+  @action
+  playPause(){
+    isPlay =!isPlay;
+  }
+
 }
