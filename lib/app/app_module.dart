@@ -38,7 +38,7 @@ class AppModule extends MainModule {
           '/rescue',
           child: (_, args) => RescueAccountPage(),
           transition: TransitionType.noTransition,
-        )
+        ),
       ];
 
   @override

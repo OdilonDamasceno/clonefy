@@ -7,8 +7,18 @@ class AppWidget extends StatelessWidget {
     return MaterialApp(
       navigatorKey: Modular.navigatorKey,
       title: 'Flutter Slidy',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      themeMode: ThemeMode.dark,
+      theme: ThemeData.from(
+        colorScheme: ColorScheme.dark(
+          primary: Colors.grey[800],
+          secondary: Colors.grey[800],
+          surface: Colors.grey[800],
+          secondaryVariant: Colors.grey[800],
+          primaryVariant: Colors.grey[800],
+          onPrimary: Colors.grey[800],
+          onSecondary: Colors.grey[800],
+          onSurface: Colors.grey[800],
+        ),
       ),
       initialRoute: '/login',
       onGenerateRoute: Modular.generateRoute,
