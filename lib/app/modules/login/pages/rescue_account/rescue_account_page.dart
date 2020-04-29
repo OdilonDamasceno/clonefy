@@ -142,6 +142,7 @@ class _RescueAccountPageState extends State<RescueAccountPage> {
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
                         letterSpacing: 1.2,
+                        color: Colors.black,
                       ),
                     ),
                   ),

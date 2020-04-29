@@ -234,6 +234,7 @@ class _SignInPageState extends State<SignInPage>
                         fontWeight: FontWeight.bold,
                         fontSize: 17,
                         letterSpacing: 1.2,
+                        color: Colors.black,
                       ),
                     ),
                   ),

@@ -62,6 +62,7 @@ class _LoginPageState extends State<LoginPage> {
               children: <Widget>[
                 ButtonCustomWidget(
                   color: Colors.green,
+                  textColor: Colors.white,
                   onPressed: () {
                     Modular.to.pushNamed('/create');
                   },
@@ -69,6 +70,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
                 ButtonCustomWidget(
                   color: Colors.lightBlue[900],
+                  textColor: Colors.white,
                   onPressed: () {},
                   text: 'continuar com o facebook',
                 ),

@@ -307,6 +307,14 @@ class _SearchPageState extends State<SearchPage> {
               ),
             ),
             Scaffold(
+              floatingActionButton: FloatingActionButton(
+                onPressed: () {},
+                backgroundColor: Colors.white,
+                child: Icon(
+                  Icons.mic_none,
+                  color: Colors.pink[300],
+                ),
+              ),
               backgroundColor: Colors.black,
               appBar: AppBar(
                 leading: IconButton(
