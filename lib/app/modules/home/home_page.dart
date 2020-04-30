@@ -60,23 +60,26 @@ class _HomePageState extends ModularState<HomePage, HomeController> {
                             Icons.keyboard_arrow_up,
                             color: Colors.white,
                           ),
-                          Row(
-                            children: <Widget>[
-                              Text(
-                                'Music name ° ',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.w600,
+                          GestureDetector(
+                            onTap: () => Modular.to.pushNamed('/music'),
+                            child: Row(
+                              children: <Widget>[
+                                Text(
+                                  'Music name ° ',
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                'Artist name',
-                                style: TextStyle(
-                                  color: Colors.grey,
-                                  fontWeight: FontWeight.w600,
-                                ),
-                              )
-                            ],
+                                Text(
+                                  'Artist name',
+                                  style: TextStyle(
+                                    color: Colors.grey,
+                                    fontWeight: FontWeight.w600,
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                           Row(
                             children: <Widget>[

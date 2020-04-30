@@ -3,6 +3,7 @@ import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter/material.dart';
 import 'package:spotify_clone/app/app_widget.dart';
 import 'package:spotify_clone/app/modules/home/home_module.dart';
+import 'package:spotify_clone/app/modules/home/pages/music/music_page.dart';
 import 'modules/login/login_module.dart';
 import 'modules/login/pages/create_account/create_account_controller.dart';
 import 'modules/login/pages/create_account/create_account_page.dart';
@@ -38,6 +39,10 @@ class AppModule extends MainModule {
           '/rescue',
           child: (_, args) => RescueAccountPage(),
           transition: TransitionType.noTransition,
+        ),
+        Router(
+          '/music',
+          child: (_, args) => MusicPage(),
         ),
       ];
 
